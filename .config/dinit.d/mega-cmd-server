@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/mega-cmd-server
+restart = true
+logfile = $HOME/log/mega-cmd-server.log

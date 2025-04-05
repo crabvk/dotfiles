@@ -1,0 +1,17 @@
+*.local
+*.pyc
+*.pyo
+/*.local
+/.elixir_ls
+/.pytest_cache
+/.rebar3
+/.rgignore
+/.ruby-lsp
+/.vagrant
+/.vite
+/.vscode
+/vendor/bundle
+/venv
+__pycache__
+erl_crash.dump
+npm-debug.log

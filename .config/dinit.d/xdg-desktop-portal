@@ -1,0 +1,7 @@
+type = process
+command = /usr/local/bin/dbus-service-wait -d 3 org.freedesktop.portal.Desktop /usr/lib/xdg-desktop-portal --replace
+env-file = /home/crabvk/.config/dinit.d/config/display.conf
+restart = true
+ready-notification = pipefd:3
+depends-on = xdg-desktop-portal-wlr
+depends-on = xdg-desktop-portal-gtk

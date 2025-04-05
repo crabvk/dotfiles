@@ -1,0 +1,5 @@
+type = process
+command = /usr/bin/gammastep
+env-file = /home/crabvk/.config/dinit.d/config/display.conf
+restart = true
+depends-on = sway

@@ -1,0 +1,151 @@
+{
+  "layer": "top",
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+  "modules-right": [
+    "tray",
+    "custom/rub",
+    "custom/btc",
+    "custom/weather",
+    "custom/network",
+    "pulseaudio",
+    "bluetooth",
+    "disk#crypt",
+    "cpu",
+    "temperature",
+    "memory",
+    "sway/language",
+    "clock"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "10": "",
+      "default": ""
+    }
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "sway/window": {
+    "format": "{title}",
+    "tooltip": false
+  },
+  "sway/language": {
+    "format": "{short}",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "exec": "/home/crabvk/code/scripts/weather.fish",
+    "format": " {}",
+    "interval": 30,
+    "on-click": "xdg-open https://www.foreca.ru/Russia/Perm"
+  },
+  "custom/network": {
+    "exec": "/home/crabvk/code/scripts/network.fish",
+    "format": " {}",
+    "interval": 1,
+    "on-click": "xdg-open https://myip.wtf"
+  },
+  "custom/rub": {
+    "exec": "/home/crabvk/code/scripts/ticker/bybit-p2p.fish",
+    "format": " {}",
+    "interval": 30,
+    "on-click": "xdg-open https://www.bybit.com/fiat/trade/otc/?actionType=0&token=USDT&fiat=RUB&paymentMethod=14"
+  },
+  "custom/btc": {
+    "exec": "/home/crabvk/code/scripts/ticker/binance.fish -f BTCUSDT",
+    "format": " {}",
+    "interval": 30,
+    "on-click": "xdg-open https://www.binance.com/en/trade/BTC_USDT?layout=pro"
+  },
+  "custom/gmail": {
+    "exec": "bar-gmail",
+    "return-type": "json",
+    "interval": 10,
+    "tooltip": false,
+    "on-click": "xdg-open https://mail.google.com/mail/u/0/#inbox"
+  },
+  "custom/protonmail": {
+    "exec": "bar-protonmail -p https socks5://foxprox:e2diWXZzFUL1T7te@94.130.109.73:1080",
+    "return-type": "json",
+    "interval": 10,
+    "tooltip": false,
+    "on-click": "xdg-open https://mail.proton.me/u/0/inbox"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 10,
+    "states": {
+      "warning": 15,
+      "critical": 5
+    },
+    "format-time": "{H}h {M}m",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": " 100%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+  "disk#crypt": {
+    "format": " {free}",
+    "path": "/",
+    "interval": 10
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 14
+  },
+  "clock": {
+    "format": "{:%a, %d %b %H:%M}",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°",
+    "format-icons": ["︁", "︁", "", "︁", "︁"]
+  },
+  "memory": {
+    "interval": 10,
+    "format": "︁ {used:0.1f}G",
+    "max-length": 10
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{format_source}  {icon} {volume}%",
+    "format-muted": "{format_source}    {volume}%",
+    "format-source": " {volume}%",
+    "format-source-muted": " {volume}%",
+    "format-icons": {
+      "hdmi": "",
+      "headphone": "",
+      "default": ["", "", "", ""]
+    },
+    "on-click": "/home/crabvk/code/scripts/switch-audio-output.fish"
+  },
+  "network": {
+    "interface": "wlp2s0",
+    "format-wifi": " {signalStrength}%",
+    "format-disconnected": "",
+    "tooltip-format-wifi": "{essid}\n{ipaddr}\n{ifname}"
+  }
+}

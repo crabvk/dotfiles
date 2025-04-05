@@ -1,0 +1,6 @@
+type = process
+command = /usr/bin/mako
+env-file = /home/crabvk/.config/dinit.d/config/display.conf
+restart = true
+depends-on = dbus
+depends-on = sway

@@ -1,0 +1,4 @@
+type = scripted
+command = /usr/local/bin/set-default-sink
+restart = false
+after = pipewire-pulse

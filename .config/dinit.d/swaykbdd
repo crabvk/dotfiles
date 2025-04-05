@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/swaykbdd --tabapps firefox,chrome,firefox-developer-edition
+restart = true
+depends-on = sway

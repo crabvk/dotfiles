@@ -1,0 +1,6 @@
+type = process
+command = /usr/bin/sway
+restart = true
+working-dir = $HOME
+logfile = $HOME/log/sway.log
+ready-notification = pipefd:3

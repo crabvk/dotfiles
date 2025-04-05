@@ -1,0 +1,91 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Noto Sans", "Font Awesome 6 Pro Regular";
+    font-size: 16px;
+    min-height: 26px;
+}
+
+button:hover {
+    background-color: #323842;
+}
+
+window#waybar {
+    background-color: #030303;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+label,
+window#waybar button {
+    color: #b6b6b6;
+}
+
+#workspaces button {
+    color: #b6b6b6;
+    padding: 0 6px;
+}
+
+#workspaces button.focused {
+    background-color: #323842;
+}
+
+#workspaces button.focused label {
+    color: white;
+}
+
+#workspaces button.urgent {
+    color: black;
+    background-color: #d19a66;
+}
+
+#mode {
+    background-color: #4e4e4e;
+}
+
+#language {
+    font-family: "Fira Code";
+}
+
+#window > label {
+    margin-left: 18px;
+    color: #818384;
+}
+
+widget > label {
+    padding: 0 4px;
+    margin: 0 2px;
+    color: #b6b6b6;
+}
+
+widget > box#tray {
+    margin-right: 4px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #d19a66;
+        color: black;
+    }
+}
+
+#custom-protonmail.inaccurate,
+#custom-mail.inaccurate {
+    color: #909090;
+}
+
+#temperature.critical {
+    color: #d19a66;
+}
+
+#battery.discharging.warning {
+    color: #d19a66;
+}
+
+#battery.discharging.critical {
+    color: #e06c75;
+}

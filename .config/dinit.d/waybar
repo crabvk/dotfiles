@@ -1,0 +1,6 @@
+type = process
+command = /usr/bin/waybar
+env-file = /home/crabvk/.config/dinit.d/config/display.conf
+restart = true
+logfile = $HOME/log/waybar.log
+depends-on = sway

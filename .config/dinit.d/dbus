@@ -1,0 +1,5 @@
+type = process
+command = /usr/bin/dbus-daemon --session --print-address 3 --address $DBUS_SESSION_BUS_ADDRESS
+restart = true
+load-options = sub-vars
+ready-notification = pipefd:3

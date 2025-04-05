@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/ssh-agent -Da $SSH_AUTH_SOCK
+restart = true
+load-options = sub-vars
