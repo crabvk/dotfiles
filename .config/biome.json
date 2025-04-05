@@ -1,0 +1,55 @@
+{
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noChildrenProp": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off",
+        "useGetterReturn": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "noArguments": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off"
+      }
+    }
+  },
+  "formatter": {
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "lineEnding": "lf",
+    "lineWidth": 100
+  },
+  "organizeImports": {
+    "enabled": false
+  },
+  "css": {
+    "parser": {
+      "cssModules": true
+    },
+    "formatter": {
+      "indentWidth": 4
+    }
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    },
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "indentStyle": "space"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+image=/usr/share/backgrounds/penguin-diving.jpg
+scaling=fill
+ignore-empty-password
+font=Noto Sans
+font-size=24
+indicator-radius=70
+indicator-thickness=14
+bs-hl-color=e06c75
+key-hl-color=4caf50
+ring-color=98c379
+line-color=282c34
+text-color=abb2bf
+inside-color=282c3475
+inside-clear-color=d19a6675
+inside-ver-color=61afef75
+inside-wrong-color=e06c7575
+ring-ver-color=2196f3
+ring-clear-color=ffeb3b
+ring-wrong-color=f44336
