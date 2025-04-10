@@ -57,6 +57,9 @@ return {
           prompt_title = 'Grep open files',
         })
       end, { desc = 'Find open files' })
+      vim.keymap.set('n', '<leader>fn', function()
+        builtin.find_files({ cwd = vim.fn.stdpath('config') })
+      end, { desc = 'Find Neovim files' })
     end,
   },
 }

@@ -22,6 +22,7 @@ lazy.setup({
     { import = 'plugins.autopairs' },
     { import = 'plugins.blink-cmp' },
     { import = 'plugins.colorful-menu' },
+    { import = 'plugins.comment' },
     { import = 'plugins.conform' },
     { import = 'plugins.gitsigns' },
     { import = 'plugins.gruvbox' },

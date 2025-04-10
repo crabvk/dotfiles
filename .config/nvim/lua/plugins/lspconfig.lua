@@ -79,11 +79,13 @@ return {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs.
       local servers = {
         clangd = {},
+        html = {},
+        emmet_language_server = {},
+        eslint = {},
         vtsls = {},
         biome = {},
         cssls = {},
         css_variables = {},
-        eslint = {},
         pyright = {},
         lua_ls = {
           settings = {
