@@ -1,6 +1,5 @@
--- Set to `false` to disable formatting of HTML, CSS and JavaScript.
-vim.g.format_web = false
-
+-- Set to `false` to disable format on save.
+vim.g.autoformat = false
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 

@@ -39,5 +39,5 @@ lazy.setup({
     { import = 'plugins.treesitter' },
   },
   install = { colorscheme = { 'gruvbox' } },
-  checker = { enabled = true },
+  checker = { enabled = false },
 })
