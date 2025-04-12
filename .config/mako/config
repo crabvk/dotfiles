@@ -2,10 +2,10 @@ font=Noto Sans Mono 12
 layer=overlay
 max-visible=-1
 sort=+time
-background-color=#323234
-text-color=#abb2bf
-border-color=#5c6370
-progress-color=#5c6370
+background-color=#32302f
+text-color=#ebdbb2
+border-color=#83a598
+progress-color=#928374
 padding=12
 width=480
 height=256
@@ -13,16 +13,16 @@ border-size=2
 border-radius=2
 
 [urgency=high]
-border-color=#d18f52
+border-color=#fabd2f
 
 [urgency=normal]
-border-color=#9fa8da
+border-color=#83a598
 
 [urgency=low]
-border-color=#5c6370
+border-color=#928374
 
 [actionable]
-border-color=#00695c
+border-color=#b8bb26
 
 [app-name=volume]
 format=%b
