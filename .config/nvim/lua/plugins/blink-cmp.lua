@@ -27,6 +27,11 @@ return {
       -- (Default) Only show the documentation popup when manually triggered
       completion = {
         documentation = { auto_show = false },
+        accept = {
+          auto_brackets = {
+            enabled = false,
+          },
+        },
         menu = {
           draw = {
             columns = { { 'kind_icon' }, { 'label', gap = 1 } },

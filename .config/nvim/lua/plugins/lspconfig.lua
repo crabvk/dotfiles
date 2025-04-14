@@ -24,17 +24,21 @@ return {
             })
           end
           local builtin = require('telescope.builtin')
-          map('grr', builtin.lsp_references, 'Goto references')
-          map('gri', builtin.lsp_implementations, 'Goto implementation')
+          map('grr', builtin.lsp_references, 'Go to references')
+          map('gri', builtin.lsp_implementations, 'Go to implementation')
           map('gO', builtin.lsp_document_symbols, 'Document symbols')
-          map('gd', builtin.lsp_definitions, 'Goto definition')
-          map('gD', vim.lsp.buf.declaration, 'Goto declaration')
+          map('gd', builtin.lsp_definitions, 'Go to definition')
+          map('gD', vim.lsp.buf.declaration, 'Go to declaration')
           map('<leader>D', builtin.lsp_type_definitions, 'Type definition')
           map('<leader>ws', builtin.lsp_dynamic_workspace_symbols, 'Workspace symbols')
           map('<leader>ca', vim.lsp.buf.code_action, 'Code action', { 'n', 'x' })
           map('<leader>qf', quickfix, 'Quick fix')
-          map('<leader>dn', vim.diagnostic.goto_next, 'Goto next diagnostic')
-          map('<leader>dp', vim.diagnostic.goto_prev, 'Goto previous diagnostic')
+          map('<leader>dn', function()
+            vim.diagnostic.jump({ count = 1 })
+          end, 'Go to next diagnostic')
+          map('<leader>dp', function()
+            vim.diagnostic.jump({ count = -1 })
+          end, 'Go to previous diagnostic')
 
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           -- The following code creates a keymap to toggle inlay hints in your
@@ -81,7 +85,6 @@ return {
         clangd = {},
         html = {},
         emmet_language_server = {},
-        eslint = {},
         vtsls = {},
         biome = {},
         cssls = {},

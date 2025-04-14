@@ -1,5 +1,5 @@
 -- Set to `false` to disable format on save.
-vim.g.autoformat = false
+vim.g.autoformat = true
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -31,8 +31,6 @@ vim.wo.relativenumber = true
 vim.keymap.set('n', '<C-n>', ':bnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-p>', ':bprev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-s>', ':write<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<CR>', '<Nop>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Diagnostics quickfix list' })
 vim.keymap.set('n', '<leader>td', function()
