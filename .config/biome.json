@@ -15,8 +15,7 @@
         "useGetterReturn": "off"
       },
       "style": {
-        "noNonNullAssertion": "off",
-        "noArguments": "off"
+        "noNonNullAssertion": "off"
       },
       "a11y": {
         "noSvgWithoutTitle": "off",
@@ -30,8 +29,12 @@
     "lineEnding": "lf",
     "lineWidth": 100
   },
-  "organizeImports": {
-    "enabled": false
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
   },
   "css": {
     "parser": {

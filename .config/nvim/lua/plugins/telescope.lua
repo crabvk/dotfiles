@@ -26,7 +26,7 @@ return {
             },
           },
           history = {
-            path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
+            path = vim.fn.stdpath('data') .. '/databases/telescope_history.sqlite3',
             limit = 100,
           },
         },
@@ -49,8 +49,16 @@ return {
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live grep' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Find diagnostics' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Find resume' })
+      vim.keymap.set('n', '<leader>fm', builtin.marks, { desc = 'Find marks' })
       vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = 'Find recent files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
+      vim.keymap.set('n', '<leader>/', function()
+        local themes = require('telescope.themes')
+        builtin.current_buffer_fuzzy_find(themes.get_dropdown({
+          winblend = 10,
+          previewer = false,
+        }))
+      end, { desc = 'Search in current buffer' })
       vim.keymap.set('n', '<leader>f/', function()
         builtin.live_grep({
           grep_open_files = true,

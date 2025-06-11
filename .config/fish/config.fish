@@ -1,2 +1,2 @@
-fish_add_path -P $NPM_CONFIG_PREFIX/bin $HOME/.local/share/nvim/mason/bin
+fish_add_path -P $HOME/.local/share/nvim/mason/bin $NPM_CONFIG_PREFIX/bin
 mise activate fish | source

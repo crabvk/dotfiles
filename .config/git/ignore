@@ -3,6 +3,7 @@
 *.pyo
 /*.local
 /.elixir_ls
+/.idea
 /.pytest_cache
 /.rebar3
 /.rgignore

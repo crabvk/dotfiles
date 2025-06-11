@@ -15,6 +15,8 @@ if vim.g.vscode then
 end
 
 require('lastplace')
+vim.lsp.enable('just')
+vim.lsp.enable('fish_lsp')
 
 local lazy = require('lazy')
 lazy.setup({
@@ -32,12 +34,15 @@ lazy.setup({
     { import = 'plugins.mini' },
     { import = 'plugins.multicursor' },
     { import = 'plugins.neoscroll' },
+    { import = 'plugins.recall' },
     { import = 'plugins.sleuth' },
     { import = 'plugins.snacks' },
     { import = 'plugins.surround' },
     { import = 'plugins.telescope' },
     { import = 'plugins.todo-comments' },
     { import = 'plugins.treesitter' },
+    { import = 'plugins.treesitter-context' },
+    { import = 'plugins.wakatime' },
     { import = 'plugins.yazi' },
   },
   install = { colorscheme = { 'gruvbox' } },
