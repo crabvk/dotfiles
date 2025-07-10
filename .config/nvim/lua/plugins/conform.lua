@@ -25,6 +25,7 @@ return {
         log_level = vim.log.levels.WARN,
         notify_on_error = false,
         formatters_by_ft = {
+          markdown = { 'markdownfmt' },
           lua = { 'stylua' },
           python = { 'ruff_format' },
           graphql = { 'prettierd' },
@@ -32,7 +33,6 @@ return {
           jsx = { 'prettierd' },
           less = { 'prettierd' },
           scss = { 'prettierd' },
-          html = { 'prettierd' },
           css = { 'biome' },
           javascript = { 'biome' },
           typescript = { 'biome' },

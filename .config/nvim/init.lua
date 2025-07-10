@@ -15,8 +15,6 @@ if vim.g.vscode then
 end
 
 require('lastplace')
-vim.lsp.enable('just')
-vim.lsp.enable('fish_lsp')
 
 local lazy = require('lazy')
 lazy.setup({
