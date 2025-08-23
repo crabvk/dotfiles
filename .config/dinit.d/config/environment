@@ -1,0 +1,26 @@
+EDITOR=nvim
+MOZ_ENABLE_WAYLAND=1
+CHROOT=/chroot
+
+SSH_AUTH_SOCK=/run/user/1000/ssh-agent.sock
+SWAYSOCK=/run/user/1000/sway-ipc.sock
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+# WLR_RENDERER=vulkan
+LIBSEAT_BACKEND=logind
+GDK_DPI_SCALE=1.33
+QT_ENABLE_HIGHDPI_SCALING=1
+# QT_SCALE_FACTOR=1
+QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+QT_QPA_PLATFORMTHEME=qt6ct
+XDG_CURRENT_DESKTOP=sway
+
+MANPAGER='less -R --use-color -Dd+r -Du+b'
+BC_ENV_ARGS=/home/crabvk/.bcrc
+
+SKIM_DEFAULT_COMMAND='fd -tf'
+PDSH_RCMD_TYPE=ssh
+
+NPM_CONFIG_PREFIX=/home/crabvk/.npm-packages
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+CLASSPATH=.:/usr/share/java/antlr-complete.jar

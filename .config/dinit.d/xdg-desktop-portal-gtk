@@ -1,5 +1,5 @@
 type = process
-command = /usr/local/bin/dbus-service-wait -d 3 org.freedesktop.impl.portal.desktop.gtk /usr/lib/xdg-desktop-portal-gtk
+command = /usr/lib/dinit/dbus-wait-for -f 3 -n org.freedesktop.impl.portal.desktop.gtk /usr/lib/xdg-desktop-portal-gtk
 env-file = /home/crabvk/.config/dinit.d/config/display.conf
 restart = true
 ready-notification = pipefd:3

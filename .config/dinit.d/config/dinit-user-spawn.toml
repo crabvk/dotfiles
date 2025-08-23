@@ -1,0 +1,9 @@
+dinit_arguments = [
+    "--user",
+    "--env-file",
+    "/home/crabvk/.config/dinit.d/config/environment",
+    "--log-file",
+    "/home/crabvk/log/dinit.log"
+]
+minimal_environment_handling = false
+verbose_debug = false
