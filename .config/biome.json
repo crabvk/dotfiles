@@ -7,19 +7,27 @@
   "linter": {
     "rules": {
       "correctness": {
-        "noChildrenProp": "off"
+        "noChildrenProp": "off",
+        "useUniqueElementIds": "off"
       },
       "suspicious": {
         "noExplicitAny": "off",
         "noArrayIndexKey": "off",
-        "useGetterReturn": "off"
+        "useGetterReturn": "off",
+        "noUnknownAtRules": "off"
       },
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "noUselessElse": "on",
+        "useBlockStatements": "on"
       },
       "a11y": {
         "noSvgWithoutTitle": "off",
-        "useKeyWithClickEvents": "off"
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off"
+      },
+      "complexity": {
+        "noImportantStyles": "off"
       }
     }
   },

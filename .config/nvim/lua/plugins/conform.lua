@@ -23,9 +23,9 @@ return {
 
       require('conform').setup({
         log_level = vim.log.levels.WARN,
-        notify_on_error = false,
+        notify_on_error = true,
         formatters_by_ft = {
-          markdown = { 'markdownfmt' },
+          markdown = { 'prettierd' },
           lua = { 'stylua' },
           python = { 'ruff_format' },
           graphql = { 'prettierd' },
@@ -33,6 +33,7 @@ return {
           jsx = { 'prettierd' },
           less = { 'prettierd' },
           scss = { 'prettierd' },
+          html = { 'superhtml' },
           css = { 'biome' },
           javascript = { 'biome' },
           typescript = { 'biome' },

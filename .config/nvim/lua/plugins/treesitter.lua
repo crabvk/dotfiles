@@ -39,7 +39,6 @@ return {
           'just',
           'lua',
           'luadoc',
-          'lua',
           'make',
           'markdown',
           'markdown_inline',

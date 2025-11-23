@@ -43,8 +43,8 @@ end, { silent = true, noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = 'Yank to clipboard' })
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { desc = 'Paste from clipboard' })
 vim.keymap.set({ 'n', 'v' }, '<leader>P', '"+P', { desc = 'Paste from clipboard above the line' })
-vim.keymap.set('n', 'g+', '<Cmd>call append(line(".") - 1, repeat([""], v:count1))<CR>')
-vim.keymap.set('n', '+', '<Cmd>call append(line("."),     repeat([""], v:count1))<CR>')
+vim.keymap.set('n', '+', '<Cmd>call append(line(".") - 1,     repeat([""], v:count1))<CR>')
+vim.keymap.set('n', 'g+', '<Cmd>call append(line("."), repeat([""], v:count1))<CR>')
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text',

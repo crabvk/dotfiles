@@ -7,6 +7,7 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
       'saghen/blink.cmp',
+      'nvim-telescope/telescope.nvim',
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -87,7 +88,9 @@ return {
         fish_lsp = {},
         cspell = {},
         clangd = {},
-        html = {},
+        superhtml = {
+          cmd = { 'superhtml', 'lsp', '--syntax-only' },
+        },
         emmet_language_server = {},
         vtsls = {},
         biome = {},
