@@ -1,9 +1,4 @@
 {
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
   "linter": {
     "rules": {
       "correctness": {
@@ -43,6 +38,9 @@
         "organizeImports": "off"
       }
     }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
   },
   "css": {
     "parser": {

@@ -1,10 +1,4 @@
 alias books 'nvim ~/notes/books.md'
-alias c code
-alias i idea
-alias cdp 'cd ../'
-alias cdpp 'cd ../../'
-alias cd3p 'cd ../../../'
-alias cd4p 'cd ../../../../'
 alias confc 'nvim ~/.config/code/User/settings.json'
 alias conff 'nvim ~/.config/fish/config.fish'
 alias conffo 'nvim ~/.config/foot/foot.ini'
@@ -22,5 +16,3 @@ alias work 'sudo /usr/local/bin/work'
 alias rcp 'command rsync -ah --info=progress2'
 alias poweroff 'loginctl poweroff'
 alias reboot 'loginctl reboot'
-alias p 'proxy-ns'
-alias psh 'proxy-ns fish'

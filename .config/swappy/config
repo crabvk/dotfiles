@@ -1,7 +1,9 @@
 [Default]
-save_dir=/tmp/null
+save_dir=$HOME/screenshots
 show_panel=true
 line_size=3
-text_size=20
+text_size=30
 text_font=Noto Sans
 paint_mode=rectangle
+early_exit=true
+auto_save=true

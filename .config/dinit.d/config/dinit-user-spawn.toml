@@ -5,5 +5,4 @@ dinit_arguments = [
     "--log-file",
     "/home/crabvk/log/dinit.log"
 ]
-minimal_environment_handling = false
 verbose_debug = false

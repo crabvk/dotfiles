@@ -1,9 +1,9 @@
 font = "Noto Sans"
-font-size = 15
+font-size = 19
 prompt-text = "> "
 drun-launch = true
-width = 500
-height = 500
+width = 600
+height = 700
 background-color = #1d2021
 outline-width = 0
 border-width = 5

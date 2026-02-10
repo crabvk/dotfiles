@@ -6,7 +6,6 @@
     "custom/rub",
     "custom/btc",
     "custom/weather",
-    "custom/network",
     "pulseaudio",
     "bluetooth",
     "disk#crypt",
@@ -24,8 +23,9 @@
       "2": "",
       "3": "",
       "4": "",
-      "5": "",
-      "10": "",
+      "5": "",
+      "9": "",
+      "10": "",
       "default": ""
     }
   },
@@ -44,19 +44,13 @@
     "exec": "/home/crabvk/code/scripts/weather.fish",
     "format": " {}",
     "interval": 30,
-    "on-click": "xdg-open https://www.foreca.ru/Russia/Perm"
-  },
-  "custom/network": {
-    "exec": "/home/crabvk/code/scripts/network.fish",
-    "format": " {}",
-    "interval": 1,
-    "on-click": "xdg-open https://myip.wtf"
+    "on-click": "xdg-open https://www.meteoblue.com/en/weather/today/perm_russia_511196"
   },
   "custom/rub": {
     "exec": "/home/crabvk/code/scripts/ticker/bybit-p2p.fish",
     "format": " {}",
     "interval": 30,
-    "on-click": "xdg-open https://www.bybit.com/fiat/trade/otc/?actionType=0&token=USDT&fiat=RUB&paymentMethod=14"
+    "on-click": "xdg-open https://www.bybit.com/en/p2p/buy/USDT/RUB"
   },
   "custom/btc": {
     "exec": "/home/crabvk/code/scripts/ticker/binance.fish -f BTCUSDT",
@@ -107,7 +101,7 @@
     "interval": 10
   },
   "tray": {
-    "icon-size": 16,
+    "icon-size": 24,
     "spacing": 14
   },
   "clock": {

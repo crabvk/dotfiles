@@ -84,19 +84,25 @@ return {
 
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs.
       local servers = {
-        just = {},
-        fish_lsp = {},
-        cspell = {},
-        clangd = {},
-        superhtml = {
-          cmd = { 'superhtml', 'lsp', '--syntax-only' },
+        biome = {
+          filetypes = {
+            'astro',
+            'css',
+            'graphql',
+            'javascript',
+            'javascriptreact',
+            'json',
+            'jsonc',
+            'svelte',
+            'typescript',
+            'typescript.tsx',
+            'typescriptreact',
+            'vue',
+          },
         },
-        emmet_language_server = {},
-        vtsls = {},
-        biome = {},
-        cssls = {},
-        css_variables = {},
-        pyright = {},
+        superhtml = {
+          -- cmd = { 'superhtml', 'lsp', '--syntax-only' },
+        },
         lua_ls = {
           settings = {
             Lua = {
@@ -114,27 +120,36 @@ return {
 
       local ensure_installed = vim.tbl_keys(servers)
       vim.list_extend(ensure_installed, {
-        'stylua',
-        'prettierd',
-        'ruff',
+        'clangd',
         'codespell',
+        'cspell',
+        'css_variables',
+        'cssls',
+        'cssmodules_ls',
+        'emmet_language_server',
+        'fish_lsp',
+        'just',
+        'prettierd',
+        'pyright',
+        'ruff',
+        'stylua',
+        'taplo',
+        'ts_ls',
+        'zls',
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      local lspconfig = require('lspconfig')
       local blink_cmp = require('blink.cmp')
       require('mason-lspconfig').setup({
         ensure_installed = {},
         automatic_installation = false,
-        handlers = {
-          function(server)
-            local config = servers[server] or {}
-            config.capabilities = blink_cmp.get_lsp_capabilities(capabilities)
-            lspconfig[server].setup(config)
-          end,
-        },
       })
+      for _, server in ipairs(ensure_installed) do
+        local config = servers[server] or {}
+        config.capabilities = blink_cmp.get_lsp_capabilities(capabilities)
+        vim.lsp.config(server, config)
+      end
     end,
   },
 }

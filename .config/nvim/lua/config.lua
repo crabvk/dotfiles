@@ -7,6 +7,7 @@ vim.opt.autoindent = true
 vim.opt.colorcolumn = { 100 }
 vim.opt.cursorline = true
 vim.opt.expandtab = true
+vim.opt.laststatus = 3
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.mouse = ''
@@ -15,7 +16,7 @@ vim.opt.number = true
 vim.opt.scrolloff = 10
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes:1'
 vim.opt.smartcase = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -37,6 +38,7 @@ vim.keymap.set({ 'n', 'i', 'x', 's' }, '<C-S-s>', function()
   vim.api.nvim_command('wa')
 end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Diagnostics quickfix list' })
+vim.keymap.set('n', '<leader>z', '<cmd>ZenMode<CR>', { desc = 'Toggle zen mode' })
 vim.keymap.set('n', '<leader>td', function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { silent = true, noremap = true })
@@ -54,7 +56,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd({ 'TermOpen' }, {
+vim.api.nvim_create_autocmd('TermOpen', {
   desc = 'Switch to insert mode on terminal open',
   pattern = { '*' },
   callback = function()
